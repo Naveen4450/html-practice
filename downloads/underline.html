@@ -1,0 +1,40 @@
+<html>
+<head>
+	<style>
+		p span
+		{
+			text-decoration:underline;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-git.js"></script>
+</head>
+<body>
+	<p>Samantha is a beautiful actress.she is an south indian actress.</p>
+	<script>
+		$(document).ready(function()
+		{
+			$('p').each(function()
+			{
+				var under=
+					$(this).text().split(' ');
+
+				$(this).empty().html(function()
+				{
+					for (i=0;i<under.length;i++)
+					{
+						if (i===0)
+						{
+							$(this).append('<span>'
+							+under[i] + '</span>');
+						}
+						else {
+							$(this).append(' <span>'
+							+ under[i] + '</span>');
+						}
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

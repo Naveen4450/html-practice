@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns=”http://www.w3.org/1999/xhtml”>
+<head>
+    <title>Make The First Word Bold</title>
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js”></script>
+</head>
+<body>
+    <h2>Actual Text</h2>
+    <div>
+        <p>First word bold.</p>
+        <p>Second sentence starts.</p>
+        <p>It is third sentence.</p>
+        <p>Example Text Goes HERE.</p>
+        <p>Have a good day.</p>
+        <p>This is awesome.</p>
+    </div>
+    <h2>Actual Text With First Word Bold</h2>
+    <div id=”links”>
+        <p>First word bold.</p>
+        <p>Second sentence Starts.</p>
+        <p>It is third sentence.</p>
+        <p>Example Text Goes HERE.</p>
+        <p>Have a good day.</p>
+        <p>This is awesome.</p>
+    </div>
+    <script type=”text/javascript”>
+        $(‘#links p’).each(function () {
+            var me = $(this);
+            me.html(me.text().replace(/(^w+)/, ‘<strong>$1</strong>’));
+        });
+    </script>
+</body>
+</html>

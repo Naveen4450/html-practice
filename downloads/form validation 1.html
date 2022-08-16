@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Registration Form</title>
+    <script src="form validation1.js"></script>
+    <style type="text/css">
+        body{
+            background-image: linear-gradient(to right,pink,violet);
+        }
+    </style>
+</head>
+<body>
+	<center><h1>Form Validation</h1></center><hr>
+	<center><form action="form validation 2.html" method="get" name="st_form" onsubmit="return validate()">
+		<h2>Registration Form</h2>
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="name"  id="name" onblur="validateString(this.id)">
+					<label id="lbluname"style="color: red;visibility: hidden;">Invalid</label></td>
+
+			</tr>
+            <tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="name"  id="name" onblur="validateString(this.id)">
+					<label id="lbluname"style="color: red;visibility: hidden;">Invalid</label></td>
+			</tr>
+            <tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female</td>
+			</tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob"><label for="dob"></label></td>
+            </tr>
+            <tr>
+				<td>Email-id:</td>
+				<td><input type="text" name="email" id="email" autocomplete="off" onblur="validateEmail(this.id)">
+					<label id="lblemail"style="color: red;visibility: hidden;">Invalid format</label></td>
+			</tr>
+            <tr>
+				<td>Mobile:</td>
+				<td><input type="text" name="mobile" id="mobile" onblur="validateNumber(this.id)">
+					<label id="lblmobile"style="color: red;visibility: hidden;">Invalid format</label></td>
+			</tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea id="Address" name="address" placeholder="Enter address here..." rows="4" cols="50"></textarea>
+                    <label for="address"></label></td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td><select name="year">
+                    <option value="E1">E1</option>
+                    <option value="E2">E2</option>
+                    <option value="E3">E3</option>
+                    <option value="E4">E4</option>
+                    </select>
+                <label name="year"></label></td>
+            </tr>
+            <tr>
+                <td>Favourite Subjects:</td>
+                <td><input type="checkbox" name="dbms"><label for="dbms">DBMS</label><br>
+                    <input type="checkbox" name="Web technology"><label for="Web technology">Web technology</label><br>
+                    <input type="checkbox" name="flat"><label for="flat">FLAT</label><br>
+                    <input type="checkbox" name="coa"><label for="coa">COA</label><label name="favs"></label></td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="uname" id="uname" onblur="validateuname(this.id)"</td>
+                <label id="lbluname" style="color: red;visibility: hidden;">Username not valid</label></td>
+            </tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="pass" id="pass" onblur="validatePass(this.id)">
+					<label id="lblpass"style="color: red;visibility: hidden;">Password too short</label></td>
+			</tr>
+            <tr>
+				<td>Confirm Password:</td>
+				<td><input type="password" name="conpass" id="conpass" onblur="validateconpass(this.id)">
+					<label id="lblconpass"style="color: red;visibility: hidden;">Password did not match</label></td>
+			</tr>
+            <tr>
+                <td>Security question:</td>
+                <td><select name="security">
+                    <option>select one question</option>
+                    <option> What are the last four digits of your phone number?</option>
+                    <option> What primary school did you attend</option>
+                    <option> What is your Father Name></option>
+                    </select>
+                <label name="security" for="security"></label></td>
+            </tr>
+            <tr>
+                <td>Answer:</td>
+                <td><textarea name="answer" placeholder="Enter answer here..." rows="2" cols="50"></textarea>
+                <label name="security" for="answer"></label></td>
+            </tr>
+			<tr>
+				<td><label for="Course">Select a course:</label></td>
+				<td><select name="course" id="course">
+					<option value="C-lang">C-lang</option>
+					<option value="Java">Java</option>
+					<option value="Python">Python</option>
+					<option value="Web Technologies">Web Technologies</option></select>
+				</td>
+			</tr>
+            <tr>
+                <td>Select Image:</td>
+                <td><input type="file" name="image"><label name="image" for="image"></label></td>
+            </tr>
+			<tr><td><input type="submit" onsubmit="validation()"></td></tr>
+		</table>
+	</form></center>
+</body>
+</html>

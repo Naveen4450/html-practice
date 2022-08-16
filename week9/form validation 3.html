@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>FORM VALIDATION</title>
+    <script src="form validation1.js"></script>
+    <style type="text/css">
+        body{
+            background-image: linear-gradient(to right,pink,orange);
+        }
+    </style>
+</head>
+<body>
+	<center><h1>Form Validation</h1></center><hr>
+	<center><form action="form validation 2.html" method="get" name="st_form" onsubmit="return validate()">
+		<h2>Forgot Password Form</h2>
+		<table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="uname" id="uname" onblur="validateuname(this.id)"</td>
+                <label id="lbluname" style="color: blue;visibility: hidden;">Username not valid</label></td>
+            </tr>
+            <tr>
+				<td>Email-id:</td>
+				<td><input type="text" name="email" id="email" autocomplete="off" onblur="validateEmail(this.id)">
+					<label id="lblemail"style="color: blue;visibility: hidden;">Invalid format</label></td>
+			</tr>
+            <tr>
+				<td>Mobile:</td>
+				<td><input type="text" name="mobile" id="mobile" onblur="validateNumber(this.id)">
+					<label id="lblmobile"style="color: blue;visibility: hidden;">Invalid format</label></td>
+			</tr>
+            <tr>
+                <td>Security question:</td>
+                <td><select name="security">
+                    <option>select one question</option>
+                    <option> What are the last four digits of your phone number?</option>
+                    <option> What primary school did you attend</option>
+                    <option> What is your Father Name></option>
+                    </select>
+                <label name="security" for="security"></label></td>
+            </tr>
+            <tr>
+                <td>Answer:</td>
+                <td><textarea name="answer" placeholder="Enter answer here..." rows="2" cols="50"></textarea>
+                <label name="security" for="answer"></label></td>
+            </tr>
+            <tr><td><input type="submit" onsubmit="validation()"></td></tr>
+        </table>
+        </form></center>
+    </body>

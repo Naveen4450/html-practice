@@ -1,0 +1,85 @@
+/*css background properties
+1.background-colour
+2.background-image
+3.background-repeat
+4.background-attachment
+5.background-position
+6.background(shorthand property)
+*/
+body{
+background-color:lightblue;
+opacity:0.3;/* rgba(255,255,255,0.3)*/
+background-image:url("favicon.png");
+background-repeat:no-repeat;
+background-position:right top;
+background-attachment:initial;/*scroll,fixed,local,initial,inherit*/
+background-origin:padding-box;/*padding-box(default),content-box,border-box,initial,inherit*/
+background-size:auto;/*auto,cover,contain*/
+}
+/*box model
+content,padding,border,margin
+*/
+p.dotted
+{
+border-style:inset;/*dotted/dashed/solid/groooeridge/inset/outset/none*/
+border-width:30px 45px 90px 130px;
+border-color:red;
+border-bottom-style:solid;
+border:5px solid red; 
+
+}
+h1.round1
+{
+border:2px dotted blue;
+border-radius=8px;
+margin-top:20px;
+padding-top:15px;
+}
+h2.round2
+{
+position:relative;/*static/relative/fixed/*/
+left:50px;
+z-index:-1;
+}
+div.m
+{
+font-family:"lucida cinsole",monospace;
+font-style:italic;
+font-weight:900;
+font-variant:small-caps;
+font-size:5em;
+text-align:center;
+}
+/*text effects
+text-overflow,word-wrsp,word-break,writing.
+*/
+div.x
+{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+text-align:center;
+
+}
+p.u
+{
+word-wrap:break-word;
+word-break:i-cant;
+writing-mode:vertical-rl;
+
+}
+/*wrapper cclass not exeguted*/
+.wrapper
+{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+grid-auto-rows:200px;
+grid-auto-columns:200px;
+grid-column-start:1;
+grid-row-start:1;
+grid-column-end:5;
+grid-row-end:5;
+minmax(100px,auto);
+
+
+}

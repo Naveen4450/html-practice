@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+><head>
+<meta charset=utf-8 />
+<style type="text/css">
+    body {
+        margin: 30px;
+        background-color:#FDF6F0;
+    }
+    
+</style>  
+
+<title>Count and display items of a dropdown list</title>
+
+<script>
+    function getOptions(){
+  var x= document.getElementById("mySelect")
+  var txt1 = "No. of items in dropdown is : ";
+var i;
+l=document.getElementById("mySelect").length;  
+txt1 = txt1+l;
+for (i=0;i<x.length;i++)
+  {
+    txt1 = txt1 + "\n" + x.options[i].text;
+  }
+alert(txt1);
+}
+
+</script>
+</head><body><form>
+<h2>Select your Interested Language :</h2>
+<select id="mySelect">
+<option>java</option>
+<option>Html5</option>
+<option>Css3</option>
+<option>Xml</option>
+<option>Python</option>
+<option>C++</option>
+<option>Ruby</option>
+</select>
+<input type="button" onclick="getOptions()" value="Count and Output all items">
+</form></body></html>

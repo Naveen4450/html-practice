@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        FORM-VALIDATION
+    </title>
+    <script src="form validation1.js"></script>
+        <style type="text/css">
+        body{
+            background-image: linear-gradient(to right,pink,orange);
+        }
+        </style>
+</head>
+<body>
+    <center><h1>Form Validation</h1></center><hr>
+   <center><form action="form validation 1.html" method="get" name="st_form" onsubmit="return validate()">
+		<h2>Sign Up Form</h2>
+		<table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="uname" id="uname" onblur="validateuname(this.id)"</td>
+                <label id="lbluname" style="color: blur;visibility: hidden;">Username not valid</label></td>
+            </tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="pass" id="pass" onblur="validatePass(this.id)">
+					<label id="lblpass"style="color: blue;visibility: hidden;">Password too short</label></td>
+			</tr>
+            <tr><td><input type="submit" onsubmit="validation()"></td></tr>
+            <tr><td><a href="form validation 3.html">Forgot password</a></td></tr>
+        </table>
+        </form></center>
+</body>

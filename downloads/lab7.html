@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>java script</title>
+	<script type="text/javascript">
+		document.write("JAVA SCRIPT FIRST PROGRAM"+"<br>");
+		alert("welcome to java script");
+	</script>
+</head>
+<body>
+	<h1>Basic operators</h1>
+	<script type="text/javascript">
+		let a=20;
+		
+		document.write("a="+a);
+		var x=10,y=40,z=30;
+		var res;
+		res=x+y;
+		document.write("<br>"+"addition of x and y="+ res+"<br>");
+		res=x+y+z;
+		document.write("addition of x+y+z=" +res+"<br>");
+		res=x-y;
+		document.write("substraction of x and y="+ res+"<br>" );
+		res=x*y;
+		document.write("Multiplication  of x and y="+ res+"<br>");
+		function logic()
+		{
+			let a=20,b=40,c=50;
+			document.write(a&&b);
+			document.write("<br>"+a||c);
+			document.write("<br>"+!a );
+		}
+		logic();
+		var r;
+		r=((x>y)?x:y);
+		document.write('<br>'+"((x>y)?x:y)="+r);
+		r=((x<y)?((x<y)?z:x):y);
+		document.write('<br>'+r+'<br>');
+		r=((x<y)?((x<y)?z:x):y);
+		document.write("((x&#60;y)?((x&#60;y)?z:x):y)=" +r);
+		r=(x>y);
+		document.write('<br>'+"x&#62;y="+r);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <meta charset="utf-8"/>
+    <title> highlightText </title>
+  </head>
+ 
+  <script>
+
+        function highlight() {
+        var els = document.getElementsByTagName("strong");
+        for (var i = 0; i < els.length; i++) {
+            els[i].style.color = "orange";
+        }
+        }
+
+        function returnNormal() {
+        var els = document.getElementsByTagName("strong");
+        for (var i = 0; i < els.length; i++) {
+            els[i].style.color = "black";
+        }
+        }
+  </script>
+  <body bgcolor="pink">
+    <h1>Given Task:: </h1>
+    <p>Write a JavaScript program to highlight the bold words of the paragraph,
+        on mouse over a certain link..</p>
+    <p>
+      <a href="#" onMouseOver="highlight()" onMouseOut="returnNormal()">Hover Mouse here to highlight the Bold Words In the Paragraph...</a></p> 
+    <p>
+      <strong>Hello</strong> There! Happy to see <strong>You</strong> Hope you are <strong>Good...</strong> <br>
+       <strong>Thank you</strong> Fot visiting <strong>This</strong> page !!!<strong> Any </strong> Queries Regarding <strong>Anything?</strong> Just Ping<strong>Message :)</strong>.
+   </p>
+  </body>
+</html>

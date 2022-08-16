@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Text in textarea</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body>
+            <textarea id="Naveen"></textarea><br><br>
+            <button id="text">Click here</button>
+    </body>
+    <script>
+        $(document).ready(function()
+        {
+            $("#text").click(function()
+            {
+                var txt=$("#Naveen").val();
+                alert(txt);
+            });
+        });
+    </script>
+</html>

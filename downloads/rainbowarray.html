@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>array rainbow</title>
+<script>
+function display()
+{
+	for(var i=0;i<rainbow.length;i++)
+	{
+		document.write(rainbow[i] +"<br\>");
+	}
+}
+var rainbow=["red","orange","blackberry","blue"];
+rainbow.splice(2,1);
+document.write("after removing blackberry The array is:<br\>");
+display();
+rainbow.splice(2,0,"yellow","green");
+document.write("after adding yellow and green The array is:<br\>");
+display();
+rainbow.splice(rainbow.length,0,"purple");
+document.write("after adding purple The array is:<br\>");
+display();
+</script>
+</head>
+<body>
+</body>
+</html>

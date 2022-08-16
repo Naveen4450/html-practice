@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset=utf-8>
+<title>caluclation of multiplication and division of two numbers</title>
+<script>
+function multiply()
+{
+	a=document.getElementById("num1").value;
+	b=document.getElementById("num2").value;
+	document.getElementById("result").innerHTML=a*b;
+}
+function divide()
+{
+	a=document.getElementById("num1").value;
+	b=document.getElementById("num2").value;
+	document.getElementById("result").innerHTML=a/b;
+}
+</script>
+</head>
+<body>
+<form>
+1st number:<input type="text" id="num1"><br>
+2nd number:<input type="text" id="num2"><br>
+<input type="button" onClick="multiply()" value="multiply">
+<input type="button"onClick="divide()" value="division">
+</form>
+<p>The result is :
+<p id="result"></p>
+</p>
+</body>
+</html>

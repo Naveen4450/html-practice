@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <label>Press ENTER key</label>
+        <input id="Naveen" type="text" size="40" />
+        <script type="text/javascript">
+            $('#Naveen').keypress(function(event)
+            {
+                var keycode=(event.keyCode?event.keyCode:event.which);
+                if(keycode=='13')
+                {
+                    alert('You pressed ENTER key in the textbox!');  
+                }
+                event.stopPropagation();
+            });
+            $(document).keypress(function(event)
+            {
+                var keycode=(event.keyCode?event.keyCode:event.which);
+                if(keycode=='13'){
+                    alert('You pressed ENTER key somewhere in the page!');    
+                }
+            });
+        </script>
+    </body>
+</html>

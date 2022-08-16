@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>conversion of celsius to farenheit and viceversa</title>
+<script>
+function tocelsius(farenheit)
+{
+	var result=(5/9)*(farenheit-32);
+	var output=farenheit+"\xB0F is" + result +"\xB0C.<br>";
+	document.write(output);
+	
+}
+function tofarenheit(celsius)
+{
+	var result= ((9/5)*(celsius))+32;
+	var output=celsius +"\xB0C is" + result +"\xB0F";
+	document.write(output);
+	
+}
+tocelsius(45)
+tofarenheit(60);
+</script>
+</head>
+<body>
+</body>
+</html>
+

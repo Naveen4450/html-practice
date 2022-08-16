@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-git.js">
+	</script>
+	<style>
+		.Naveen
+		{
+			height:40px;
+			width:200px;
+			border:1px solid blue;
+			color:white
+		}
+	</style>
+</head>
+<body>
+	<div style="height:20px;"></div>
+	<div id='main'>
+		This is main div
+	</div>
+	<div style="height:20px;"></div>
+	<input type="button"
+		value="Add div"
+		onclick="prependDiv()" />
+	<script>
+		function prependDiv()
+		{
+			$(document).ready(function()
+			{
+				var object=
+				{
+					id:"N170839",
+					class:"cse2",
+					css:
+					{
+						"color":"#FA8072"
+					}
+				};
+				var prependObject = $("<div>", object);
+				prependObject.html("Div is added");
+				$(prependObject).prependTo($('#main'));
+			});
+		}
+	</script>
+</body>
+</html>

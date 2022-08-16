@@ -1,0 +1,31 @@
+<html>
+<head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function()
+      {
+        $("#manasa").click(function()
+        {
+          $("h1,p").toggleClass("add");
+          $("div").toggleClass("class");
+        });
+      });
+      </script>
+<style>
+ .class
+ {
+    font-weight:bold;
+    font-size:50px;
+    color:#191970;
+ }
+.add
+ {
+    color:#DC143C;
+ }
+</style>
+</head>             
+<body>
+  <div>This is Naveen</div>
+  <button id="Naveen">Add class</button>
+</body>
+</html>

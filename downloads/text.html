@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Limit characters</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var max=10;
+			$('textarea').keyup(function()
+			{
+				var len=max-$(this).val().length;
+				$('.Naveen').text(len);
+			});
+		});
+	</script>
+</head>
+<body>
+<form>		
+<p>Maximum input characters:10</p>
+<textarea maxlength="10"></textarea>	
+<p>
+	<span class="Naveen">10</span>
+	Characters Remaining
+</p>
+</form>
+</body>
+
+</html>

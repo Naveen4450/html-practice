@@ -1,0 +1,36 @@
+<html>
+ 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <style>
+        .Naveen
+        {
+            width:40px;
+            height:25px;
+            margin:10px;
+        }
+    </style>  
+    <script>
+        $(document).ready(function()
+        {
+            $('.Naveen').click(function()
+            {
+                var list=$('#add').val();
+                var unorderedlist= 
+                    '<li>'+list+'</li>';      
+                $('.List').append(unorderedlist);
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="add">
+    <input type="button" name="add" class="Naveen" value="Add">
+    </button>
+    <div class="addTask">
+        <ul class="List">
+        </ul>
+    </div>
+</body> 
+</html>

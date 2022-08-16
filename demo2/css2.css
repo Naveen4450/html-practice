@@ -1,0 +1,112 @@
+
+div
+{
+text-align:right;
+
+}
+span
+{
+color:green;
+}
+/*simple selector
+1.name
+2.id
+3.class
+ */
+h3
+{
+text-align:center;
+}
+#para
+{
+color:blue;
+}
+.a
+{
+color:blue;
+}
+/*paragraph elements with two classes*/
+p.b
+{
+color:green;
+text-align:right;
+}
+*{
+color:pink;
+}
+/*
+combinator selector
+1.descedent selector
+2.child selector
+3.adjacent sibling selector
+4.general sibling selector
+*/
+div p
+{
+color:red;
+}
+div > p
+{
+background-color:blue;
+}
+p + p
+{
+background-color:yellow;
+}
+p ~ p
+{
+background-color:black;
+}
+a:active
+{
+color:purple;
+}
+p::after
+{
+content:"content added";
+}
+p::before
+{
+content:"content added before";
+}
+p::first-letter
+{
+font-size:90px;
+}
+p::first-line
+{
+font-size:30px;
+}
+::selection
+{
+color:yellow;
+background:orange;
+}
+input:checked
+{
+width:25px;
+height:35px;
+}
+input:disabled
+{
+width:23px;
+heighta:33px;
+}
+a:hover
+{
+color:yellow;
+}
+
+a:active
+{
+color:brown;
+}
+a:visited
+{
+color:gray;
+}
+a:link
+{
+color:purple;
+}
+/*p:empty,input:enabled,p:first-of-type,p:first-child,input:focus,a[target="-blank"]*/
