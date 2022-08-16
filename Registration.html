@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Student Registration Form</title>
+	<script type="text/javascript">
+	function validate()
+	{
+		console.log(100);
+		var fname = document.reg_form.fname;
+		var lname = document.reg_form.lname;
+		var uname = document.reg_form.uname;
+		var dob = document.reg_form.DoB;
+		var password = document.reg_form.pass;
+		var mobile = document.reg_form.mobile;
+		var email = document.reg_form.email;
+		var gen = document.reg_form.gender;
+		var address = document.reg_form.address;
+		var year = document.reg_form.myyear;
+		var course = document.reg_form.course;
+		console.log(email.value.length);
+		if(fname.value.length == 0)
+		{
+			alert("Firstname is requeired");
+			fname.focus();
+			return false;
+		}
+		if(lname.value.length == 0)
+		{
+			alert("Lastname is requeired");
+			lname.focus();
+			return false;
+		}
+		if(gen.value.length == 0)
+		{
+			alert("gender is requeired");
+			//gender.focus();
+			return false;
+		}
+		if(dob.value.length == 0)
+		{
+			alert("Date of Birth is requeired");
+			dob.focus();
+			return false;
+		}
+		if(email.value.length == 0)
+		{
+			alert("email id  is requeired");
+			email.focus();
+			return false;
+		}
+		if(mobile.value.length == 0)
+		{
+			alert("mobile is requeired");
+			mobile.focus();
+			return false;
+		}
+		if(address.value.length == 0)
+		{
+			alert("Address is requeired");
+			address.focus();
+			return false;
+		}
+		if(year.value.length == 0)
+		{
+			alert("Year is requeired");
+			year.focus();
+			return false;
+		}
+		if(uname.value.length == 0)
+		{
+			alert("Username is requeired");
+			uname.focus();
+			return false;
+		}
+		if(password.value.length == 0)
+		{
+			alert("Password is requeired");
+			password.focus();
+			return false;
+		}
+		if(course.value.length == 0)
+		{
+			alert("course is requeired");
+			course.focus();
+			return false;
+		}
+		return true;
+	}
+	function validatename(id)
+	{
+		var element = document.getElementById(id);
+		var regex=/^[a-zA-Z]+$/;
+		if(!regex.test(element.value))
+		{
+			document.getElementById("lbl" + id).style.visibility="visible";
+			element.style.border="2px solid red";
+			return false;
+		}
+		document.getElementById("lbl" + id).style.visibility="hidden";
+		element.style.border="2px solid green";
+		return true;
+	}		
+	function validateUsername(id)
+	{
+		var element = document.getElementById(id);
+		if(element.value.length < 6 || element.value.length > 15)
+		{
+			document.getElementById("lbluname").style.visibility="visible";
+			element.style.border="2px solid red";
+			return false;
+		}
+		document.getElementById("lbluname").style.visibility="hidden";
+		element.style.border="2px solid green";
+	}
+	function validatePass(id)
+	{
+		var element=document.getElementById(id);
+		var regex = /^[a-zA-Z](?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+		if(!regex.test(element.value))
+		{
+			element.style.border="2px solid red";
+			document.getElementById("lblpass").style.visibility="visible";
+			return false;
+		}
+		document.getElementById("lblpass").style.visibility="hidden";
+		element.style.border="2px solid green";
+		return true;
+	}
+	function validateCpass(id)
+	{
+		var element = document.getElementById(id);
+		if(element.value != document.getElementById("pass"))
+		{
+			element.style.border="2px solid red";
+			document.getElementById("lblcpass").style.visibility="visible";
+			return false;
+		}
+		document.getElementById("lblcpass").style.visibility="hidden";
+		element.style.border="2px solid green";
+		return true;
+	}
+	function validateNumber(id)
+	{
+		var element=document.getElementById(id);
+		var regex=/^[7-9][0-9]{9}$/;
+		if(regex.test(element.value))
+		{
+			element.style.border="2px solid green";
+			document.getElementById("lblmobile").style.visibility="hidden";
+			return true;				
+		}
+		else{
+			document.getElementById("lblmobile").style.visibility="visible";
+			element.style.border="2px solid red";
+			return false;
+		}
+	}
+	function validateEmail(id)
+	{
+		var ele=document.getElementById(id);
+		var regxemail=/^([a-zA-Z0-9 \- \.]+)[@]([a-z]+)[\.][a-z]{2,3}$/;
+		if(!regxemail.test(ele.value))
+		{
+		    document.getElementById("lblemail").style.visibility="visible";
+			ele.style.border="2px solid red";
+			return false;
+		}
+		else
+		{
+		  	document.getElementById("lblemail").style.visibility="hidden";
+		  	ele.style.border="2px solid green";
+			return true;
+		}
+	}
+	</script>
+
+		<style>
+			table {
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:12px;
+		
+
+		}
+		</style>
+</head>
+<body bgcolor="#EEEEEE">
+	<center><form action="" method="" name="reg_form" onsubmit="return validate()">
+		<h2 style="color:black;font-family:'Times New Roman', Times, serif;">Student Registration Form</h2>
+		<table cellspacing="16" cellpadding="5" bgcolor="#64DFDF" text = "Red" align = "center">
+			<tr>
+				<td>FirstName:</td>
+				<td><input type = "text" name = "fname"  id = "fname" onblur = "validatename(this.id)">
+					<label id="lblfname" style = "color: red; visibility: hidden;">Invalid</label></td>
+			</tr>
+			<tr>
+				<td>LastName:</td>
+				<td><input type = "text" name = "lname"  id = "lname" onblur = "validatename(this.id)">
+					<label id="lbllname" style = "color: red; visibility: hidden;">Invalid</label></td>
+
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female</td>
+			</tr>
+			<tr>
+				<td>Date of Birth: </td>
+				<td><input type ="date" name ="DoB" id = "DoB"></td>
+			</tr>
+			<tr>
+				<td>Email-id:</td>
+				<td><input type="text" name="email" id="email" autocomplete = "off" onblur = "validateEmail(this.id)">
+					<label id = "lblemail" style="color: red;visibility: hidden;">Invalid format</label></td>
+			</tr>
+			<tr>
+				<td>Mobile:</td>
+				<td><input type="text" name="mobile" id="mobile" onblur="validateNumber(this.id)">
+					<label id="lblmobile"style="color: red;visibility: hidden;">Invalid format</label></td>
+			</tr>
+
+			<tr>
+				<td>Address: </td> 
+				<td><textarea rows="3" cols="30" name="address" id="address" placeholder="enter your address" ></textarea> </td>
+			</tr>
+			<tr>
+				<td>Year</td>
+				<td><input type="text" list ="mydatalist" name="myyear" placeholder="choose year">
+				<datalist id = "mydatalist">
+					<option label="E1" value="E1"/>
+ 					<option label="E2" value="E2"/>
+ 					<option label="E3" value="E3"/>
+ 					<option label="E4" value="E4"/>
+ 				</datalist></td>
+ 			</tr>
+ 			<tr>
+				<td>UserName:</td>
+				<td><input type = "text" name = "uname"  id = "uname" onblur = "validateUsername(this.id)">
+					<label id="lbluname" style = "color: red; visibility: hidden;">Invalid</label></td>
+
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type = "password" name = "pass" id = "pass" onblur="validatePass(this.id)">
+					<label id = "lblpass" style = "color: red; visibility: hidden;">Password too short</label></td>
+			</tr>
+			<tr>
+				<td>Confirm Password:</td>
+				<td><input type = "password" name = "cpass" id = "cpass" onblur="validateCpass(this.id)">
+					<label id = "lblcpass" style = "color: red; visibility: hidden;">Password not matched</label></td>
+			</tr>
+			
+			<tr>
+				<td><label for="Course">Select a course:</label></td>
+				<td><input type = "course" list ="courselist" name="course" id="course" placeholder="select course">
+					<datalist id = "courselist">
+					<option value="C-lang">C-lang</option>
+					<option value="Java">Java</option>
+					<option value="Python">Python</option>
+					<option value="Web Technologies">Web Technologies</option>
+				</datalist>
+				</td>
+			</tr>
+			<tr><td><input type="submit" onsubmit="validation()"></td></tr>
+		</table>
+	</form></center>
+</body>
+</html>

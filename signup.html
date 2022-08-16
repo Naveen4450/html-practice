@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Sign up</title>
+	<script type="text/javascript">
+	function validate()
+	{
+		var uname = document.login_form.username;
+		var password = document.login_form.password;
+		if(uname.value.length == 0)
+		{
+			alert("Username is requeired");
+			uname.focus();
+			return false;
+		}
+		if(password.value.length == 0)
+		{
+			alert("Password is requeired");
+			password.focus();
+			return false;
+		}
+		return true;
+	}
+	function validateUsername(id)
+	{
+		var element = document.getElementById(id);
+		if(element.value.length < 6 || element.value.length > 15)
+		{
+			document.getElementById("lbluname").style.visibility="visible";
+			element.style.border="2px solid red";
+			return false;
+		}
+		document.getElementById("lbluname").style.visibility="hidden";
+		element.style.border="2px solid green";
+	}
+	function validatePass(id)
+	{
+		var element=document.getElementById(id);
+		if(element.value.length < 6)
+		{
+			element.style.border="2px solid red";
+			document.getElementById("lblpass").style.visibility="visible";
+			return false;
+		}
+		document.getElementById("lblpass").style.visibility="hidden";
+		element.style.border="2px solid green";
+		return true;
+	}
+</script>
+
+<style>
+			table {
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:12px;
+
+		}
+		</style>
+</head>
+<body bgcolor="#D6EFC7">
+<form action = "done.html" method="GET" name="login_form" onsubmit="return validate()">
+	<table   cellspacing="5" cellpadding="5" bgcolor="#96BB7C" text = "Red" align = "center">
+		<caption><h2>Sign in</h2></caption>
+		<tbody>
+ 		<tr>
+ 			<td>Username:</td>
+ 			<td> <input type ="text" name ="username" id = "username" placeholder="enter username" 
+ 				onblur = "validateUsername(this.id)">
+ 				<label id="lbluname" style = "color: red; visibility: hidden;">Username too short</label></td>
+		</tr>
+		<tr>
+			<td>Password: </td>
+			<td> <input type="password" name = "password" placeholder = "enter password" id="password" 
+				onblur="validatePass(this.id)">
+			<label id = "lblpass" style = "color: red; visibility: hidden;">Password too short</label></td>
+		</tr>
+		<tr><td colspan = "2"><center>
+ 			<input type="submit" value="login" onsubmit="validation()"> </center> </td>
+ 		</tr>
+ 		<tr><td>New user?
+ 			<a href="Registration.html">
+ 			<input type = "button" value="Sign up"></a>
+			</td>
+			<td align = "right"><label for = "forgot-pwd"><a href="forgot_password.html">forgot password</a></label></td>
+		</tr>
+ 	</tbody>
+ 	</table>
+ </form>
+</body>
+</html>
